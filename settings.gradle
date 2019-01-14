@@ -1,0 +1,1 @@
+include ':host', ':plugin1', ':plugin2'
