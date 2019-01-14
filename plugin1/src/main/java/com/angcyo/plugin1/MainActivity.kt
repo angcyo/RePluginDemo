@@ -50,6 +50,7 @@ class MainActivity : AppCompatActivity(), Runnable {
         }
 
         text_view.text = StringBuilder("插件1:\n").apply {
+            appendln(BuildConfig.APPLICATION_ID)
             appendln(this@MainActivity.packageName)
             appendln(RePlugin.getHostContext()?.packageName ?: "null")
             appendln(RePlugin.getPluginContext()?.packageName ?: "null")

@@ -39,6 +39,7 @@ class MainActivity : AppCompatActivity(), Runnable {
         setContentView(R.layout.activity_main)
 
         text_view.text = StringBuilder("插件2:\n").apply {
+            appendln(BuildConfig.APPLICATION_ID)
             appendln(this@MainActivity.packageName)
             appendln(RePlugin.getHostContext()?.packageName ?: "null")
             appendln(RePlugin.getPluginContext()?.packageName ?: "null")
