@@ -86,14 +86,18 @@ class MainActivity : AppCompatActivity(), Runnable {
             }
 
         }, IntentFilter("com.angcyo.plugin.action"))
-    }
-
-    override fun onResume() {
-        super.onResume()
 
         ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.WRITE_EXTERNAL_STORAGE), 101)
 
         updatePluginList()
+    }
+
+    override fun onResume() {
+        super.onResume()
+    }
+
+    override fun onStart() {
+        super.onStart()
     }
 
     fun updatePluginList() {
@@ -129,11 +133,36 @@ class MainActivity : AppCompatActivity(), Runnable {
         }
     }
 
+    fun uninstallPlugin(plugin: String) {
+        threadPool.execute {
+            val result = RePlugin.uninstall(plugin)
+            if (result) {
+                runOnUiThread {
+                    Snackbar.make(plugin_list_view, "插件:${plugin}卸载成功.", Snackbar.LENGTH_LONG).show()
+                    updatePluginList()
+                }
+            } else {
+                runOnUiThread {
+                    Snackbar.make(plugin_list_view, "插件:${plugin}卸载失败.", Snackbar.LENGTH_LONG).show()
+
+                }
+            }
+        }
+    }
+
     fun installPlugin1(view: View) {
         installPlugin("/sdcard/plugin/plugin1.apk")
     }
 
     fun installPlugin2(view: View) {
+        installPlugin("/sdcard/plugin/plugin2.apk")
+    }
+
+    fun uninstallPlugin1(view: View) {
+        uninstallPlugin("/sdcard/plugin/plugin1.apk")
+    }
+
+    fun uninstallPlugin2(view: View) {
         installPlugin("/sdcard/plugin/plugin2.apk")
     }
 

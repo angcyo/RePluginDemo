@@ -34,6 +34,18 @@
                 android:layout_height="wrap_content"/>
 
         <Button
+                android:onClick="uninstallPlugin1"
+                android:layout_marginTop="20dp"
+                android:text="卸载插件1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        <Button
+                android:onClick="uninstallPlugin2"
+                android:text="卸载插件2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        <Button
                 android:onClick="startPlugin1"
                 android:layout_marginTop="20dp"
                 android:text="启动插件1"
