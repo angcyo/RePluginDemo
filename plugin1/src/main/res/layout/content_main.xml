@@ -19,6 +19,7 @@
 
         <TextView
                 android:id="@+id/text_view"
+                android:textColor="#000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"/>
@@ -26,6 +27,7 @@
         <TextView
                 android:id="@+id/text_view1"
                 android:layout_width="wrap_content"
+                android:textColor="#000"
                 android:layout_height="wrap_content"
                 android:text="Hello World!"/>
 
@@ -33,11 +35,13 @@
                 android:id="@+id/text_view2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#000"
                 android:text="Hello World!"/>
         <TextView
                 android:id="@+id/text_view3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="#000"
                 android:text="Hello World!"/>
 
         <Button

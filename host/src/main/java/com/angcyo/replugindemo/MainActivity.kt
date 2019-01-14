@@ -68,7 +68,7 @@ class MainActivity : AppCompatActivity(), Runnable {
 
         RePlugin.registerGlobalBinder("host", object : Host.Stub() {
             override fun fetchData(parma: String?): String {
-                return "宿主收到数据:$parma"
+                return "宿主收到数据:$parma ${System.currentTimeMillis()})"
             }
 
             override fun sendData(data: String?): String {

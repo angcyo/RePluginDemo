@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.os.Bundle
 import android.support.design.widget.Snackbar
+import android.support.v4.app.FragmentActivity
 import android.support.v4.content.LocalBroadcastManager
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu
@@ -13,13 +14,14 @@ import android.view.MenuItem
 import android.view.View
 import com.angcyo.aidl.Host
 import com.angcyo.aidl.Plugin
+import com.angcyo.plugin1.R.id.*
 import com.qihoo360.replugin.RePlugin
 import com.qihoo360.replugin.base.IPC
 
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 
-class MainActivity : AppCompatActivity(), Runnable {
+class MainActivity : FragmentActivity(), Runnable {
 
     override fun run() {
         //每隔5秒, 发送一次广播
@@ -42,7 +44,7 @@ class MainActivity : AppCompatActivity(), Runnable {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        //setSupportActionBar(toolbar)
 
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)

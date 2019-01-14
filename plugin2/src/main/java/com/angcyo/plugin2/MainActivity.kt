@@ -4,10 +4,14 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import android.content.IntentFilter
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.v4.content.LocalBroadcastManager
 import android.view.View
+import android.view.Window
+import android.view.WindowManager
 import com.angcyo.aidl.Host
 import com.angcyo.aidl.Plugin
 import com.qihoo360.replugin.RePlugin
@@ -32,6 +36,8 @@ class MainActivity : AppCompatActivity(), Runnable {
         }
 
         window.decorView.postDelayed(this, 5_000)
+
+        window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
