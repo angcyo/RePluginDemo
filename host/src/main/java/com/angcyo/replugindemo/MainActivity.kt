@@ -122,6 +122,10 @@ class MainActivity : AppCompatActivity(), Runnable {
                     Snackbar.make(plugin_list_view, "插件:${path}安装失败.", Snackbar.LENGTH_LONG).show()
                 }
             } else {
+                runOnUiThread {
+                    Snackbar.make(plugin_list_view, "正在安装插件:${pluginInfo.name}.", Snackbar.LENGTH_LONG).show()
+                }
+
                 RePlugin.preload(pluginInfo)
 
                 runOnUiThread {
@@ -163,7 +167,7 @@ class MainActivity : AppCompatActivity(), Runnable {
     }
 
     fun uninstallPlugin2(view: View) {
-        installPlugin("/sdcard/plugin/plugin2.apk")
+        uninstallPlugin("/sdcard/plugin/plugin2.apk")
     }
 
     fun startPlugin1(view: View) {
