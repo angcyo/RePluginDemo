@@ -163,11 +163,11 @@ class MainActivity : AppCompatActivity(), Runnable {
     }
 
     fun uninstallPlugin1(view: View) {
-        uninstallPlugin("/sdcard/plugin/plugin1.apk")
+        uninstallPlugin("com.angcyo.plugin1")
     }
 
     fun uninstallPlugin2(view: View) {
-        uninstallPlugin("/sdcard/plugin/plugin2.apk")
+        uninstallPlugin("com.angcyo.plugin2")
     }
 
     fun startPlugin1(view: View) {
