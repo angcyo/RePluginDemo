@@ -8,20 +8,17 @@ import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.LocalBroadcastManager
-import android.support.v7.app.AppCompatActivity;
-import android.view.Menu
-import android.view.MenuItem
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.angcyo.aidl.Host
 import com.angcyo.aidl.Plugin
 import com.qihoo360.replugin.RePlugin
-import com.qihoo360.replugin.base.IPC
-
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
+import com.qihoo360.replugin.base.IPC
 
 class MainActivity : AppCompatActivity(), Runnable {
     override fun run() {
@@ -193,6 +190,16 @@ class MainActivity : AppCompatActivity(), Runnable {
     fun startPlugin12(view: View) {
         startPlugin1(view)
         startPlugin2(view)
+    }
+
+    fun startTest(view: View) {
+        threadPool.execute {
+            if (!RePlugin.startActivity(this, Intent(), "com.angcyo.plugin1", "com.angcyo.plugin1.TestActivity")) {
+                runOnUiThread {
+                    Snackbar.make(plugin_list_view, "启动Test失败.", Snackbar.LENGTH_LONG).show()
+                }
+            }
+        }
     }
 
     override fun onDestroy() {
