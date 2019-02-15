@@ -17,7 +17,7 @@ android {
 
     defaultConfig {
         applicationId "com.angcyo.plugin1"
-        minSdkVersion 21
+        minSdkVersion 18
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -48,6 +48,7 @@ android {
             }
             apkData.outputFileName = name + "-" +
                     variant.buildType.name + "_" +
+                    defaultConfig.versionName +
                     ".apk"
         }
     }
@@ -65,7 +66,4 @@ dependencies {
     implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.1'
 }
 
-apply plugin: 'replugin-plugin-gradle'
-
-repluginPluginConfig {
-}
+apply from: '../plugin.gradle'

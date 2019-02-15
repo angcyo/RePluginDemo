@@ -49,6 +49,7 @@ android {
             }
             apkData.outputFileName = name + "-" +
                     variant.buildType.name + "_" +
+                    defaultConfig.versionName +
                     ".apk"
         }
     }
@@ -66,14 +67,4 @@ dependencies {
     implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.1'
 }
 
-apply plugin: 'replugin-plugin-gradle'
-
-repluginPluginConfig {
-    // Name of 'App Module'，use '' if root dir is 'App Module'. ':app' as default.
-    appModule = ":host"
-
-    // Injectors ignored
-    // LoaderActivityInjector: Replace Activity to LoaderActivity
-    // ProviderInjector: Inject provider method call.
-    ignoredInjectors = ['LoaderActivityInjector']
-}
+apply from: '../plugin.gradle'

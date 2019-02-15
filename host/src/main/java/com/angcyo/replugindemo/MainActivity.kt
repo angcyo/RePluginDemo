@@ -13,12 +13,12 @@ import android.view.View
 import com.angcyo.aidl.Host
 import com.angcyo.aidl.Plugin
 import com.qihoo360.replugin.RePlugin
+import com.qihoo360.replugin.base.IPC
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.concurrent.LinkedBlockingQueue
 import java.util.concurrent.ThreadPoolExecutor
 import java.util.concurrent.TimeUnit
-import com.qihoo360.replugin.base.IPC
 
 class MainActivity : AppCompatActivity(), Runnable {
     override fun run() {
@@ -159,12 +159,20 @@ class MainActivity : AppCompatActivity(), Runnable {
         installPlugin("/sdcard/plugin/plugin2.apk")
     }
 
+    fun installPlugin3(view: View) {
+        installPlugin("/sdcard/plugin/plugin3.apk")
+    }
+
     fun uninstallPlugin1(view: View) {
         uninstallPlugin("com.angcyo.plugin1")
     }
 
     fun uninstallPlugin2(view: View) {
         uninstallPlugin("com.angcyo.plugin2")
+    }
+
+    fun uninstallPlugin3(view: View) {
+        uninstallPlugin("com.wayto.cablewell.plugin")
     }
 
     fun startPlugin1(view: View) {
@@ -199,6 +207,17 @@ class MainActivity : AppCompatActivity(), Runnable {
                     Snackbar.make(plugin_list_view, "启动Test失败.", Snackbar.LENGTH_LONG).show()
                 }
             }
+//            if (!RePlugin.startActivity(
+//                    this,
+//                    Intent(),
+//                    "com.wayto.cablewell.plugin",
+//                    "com.wayto.cablewell.TestActivity"
+//                )
+//            ) {
+//                runOnUiThread {
+//                    Snackbar.make(plugin_list_view, "启动plugin失败.", Snackbar.LENGTH_LONG).show()
+//                }
+//            }
         }
     }
 

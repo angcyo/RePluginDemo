@@ -9,67 +9,83 @@
         tools:showIn="@layout/activity_main"
         tools:context=".MainActivity">
 
-    <LinearLayout
-            android:id="@+id/layout1"
-            android:orientation="vertical"
+    <android.support.v4.widget.NestedScrollView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
-        <TextView
-                android:id="@+id/plugin_list_view"
-                android:text="插件列表:"
+        <LinearLayout
+                android:id="@+id/layout1"
+                android:orientation="vertical"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+                android:paddingBottom="50dp"
+                android:layout_height="wrap_content">
 
-        <Button
-                android:onClick="installPlugin1"
-                android:layout_marginTop="20dp"
-                android:text="安装插件1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <Button
-                android:onClick="installPlugin2"
-                android:text="安装插件2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <TextView
+                    android:id="@+id/plugin_list_view"
+                    android:text="插件列表:"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-        <Button
-                android:onClick="uninstallPlugin1"
-                android:layout_marginTop="20dp"
-                android:text="卸载插件1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <Button
-                android:onClick="uninstallPlugin2"
-                android:text="卸载插件2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="installPlugin1"
+                    android:layout_marginTop="20dp"
+                    android:text="安装插件1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="installPlugin2"
+                    android:text="安装插件2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="installPlugin3"
+                    android:text="安装插件3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-        <Button
-                android:onClick="startPlugin1"
-                android:layout_marginTop="20dp"
-                android:text="启动插件1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <Button
-                android:onClick="startPlugin2"
-                android:text="启动插件2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
-        <Button
-                android:onClick="startPlugin12"
-                android:text="启动插件1和2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="uninstallPlugin1"
+                    android:layout_marginTop="20dp"
+                    android:text="卸载插件1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="uninstallPlugin2"
+                    android:text="卸载插件2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="uninstallPlugin3"
+                    android:text="卸载插件3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-        <Button
-                android:onClick="startTest"
-                android:text="测试"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="startPlugin1"
+                    android:layout_marginTop="20dp"
+                    android:text="启动插件1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="startPlugin2"
+                    android:text="启动插件2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            <Button
+                    android:onClick="startPlugin12"
+                    android:text="启动插件1和2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-    </LinearLayout>
+            <Button
+                    android:onClick="startTest"
+                    android:text="测试"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
     <LinearLayout
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toTopOf="parent"
