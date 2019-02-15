@@ -19,8 +19,8 @@ android {
         applicationId "com.angcyo.plugin1"
         minSdkVersion 18
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 3
+        versionName "1.0.2"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -66,4 +66,16 @@ dependencies {
     implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.1'
 }
 
-apply from: '../plugin.gradle'
+//apply from: '../plugin.gradle'
+
+apply plugin: 'replugin-plugin-gradle'
+
+repluginPluginConfig {
+    // Name of 'App Module'，use '' if root dir is 'App Module'. ':app' as default.
+    appModule = ":host"
+
+    // Injectors ignored
+    // LoaderActivityInjector: Replace Activity to LoaderActivity
+    // ProviderInjector: Inject provider method call.
+    ignoredInjectors = ['LoaderActivityInjector']
+}

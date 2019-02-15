@@ -1,11 +1,12 @@
 apply plugin: 'replugin-plugin-gradle'
 
-repluginPluginConfig {
-    // Name of 'App Module'，use '' if root dir is 'App Module'. ':app' as default.
-    appModule = ":host"
-
-    // Injectors ignored
-    // LoaderActivityInjector: Replace Activity to LoaderActivity
-    // ProviderInjector: Inject provider method call.
-    ignoredInjectors = ['LoaderActivityInjector']
-}
+//请勿配置...
+//repluginPluginConfig {
+//    // Name of 'App Module'，use '' if root dir is 'App Module'. ':app' as default.
+//    appModule = ":host"
+//
+//    // Injectors ignored
+//    // LoaderActivityInjector: Replace Activity to LoaderActivity
+//    // ProviderInjector: Inject provider method call.
+//    ignoredInjectors = ['LoaderActivityInjector']
+//}
