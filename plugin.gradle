@@ -1,6 +1,9 @@
 apply plugin: 'replugin-plugin-gradle'
 
-//请勿配置...
+//请勿配置...否则会崩溃
+//The style on this component requires your app theme to be Theme.AppCompat (or a descendant).
+//android.support.v7.widget.ActionBarOverlayLayout cannot be cast to android.support.v7.widget.DecorContentParent
+
 //repluginPluginConfig {
 //    // Name of 'App Module'，use '' if root dir is 'App Module'. ':app' as default.
 //    appModule = ":host"

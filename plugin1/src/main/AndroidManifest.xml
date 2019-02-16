@@ -24,8 +24,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
+        <!--不支持在xml里面指定方向, 但是可以在代码里面改变-->
         <activity android:name=".TestActivity"
-                  android:screenOrientation="userLandscape"/>
+                  android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.LocalBroadcastManager
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import android.view.View
 import com.angcyo.aidl.Host
 import com.angcyo.aidl.Plugin
@@ -123,6 +124,7 @@ class MainActivity : AppCompatActivity(), Runnable {
                     Snackbar.make(plugin_list_view, "正在安装插件:${pluginInfo.name}.", Snackbar.LENGTH_LONG).show()
                 }
 
+                Log.e("test", "释放dex:${Thread.currentThread().name}")
                 RePlugin.preload(pluginInfo)
 
                 runOnUiThread {
