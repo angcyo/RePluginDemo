@@ -1,5 +1,6 @@
 # RePluginDemo
 Android--›360全面插件化RePlugin框架交互通信使用概述
+[RePlugin](https://github.com/Qihoo360/RePlugin/)
 
 # 简要说明
 
