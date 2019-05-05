@@ -14,8 +14,8 @@
                 android:name="com.qihoo360.plugin.name"
                 android:value="plugin2"/>
 
-        <activity android:name=".MainActivity"
-                  android:theme="@style/TranslationTheme">
+        <!--Android8.0以上, 透明主题不兼容  android:theme="@style/TranslationTheme"-->
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

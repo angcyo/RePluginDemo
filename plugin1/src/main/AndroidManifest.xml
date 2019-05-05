@@ -14,10 +14,11 @@
                 android:name="com.qihoo360.plugin.name"
                 android:value="plugin1"/>
 
+        <!--透明主题必须是 @android:style/Theme.Translucent -->
+        <!--Android8.0以上, 透明主题不兼容  android:theme="@android:style/Theme.Translucent"-->
         <activity
                 android:name=".MainActivity"
-                android:label="@string/app_name"
-                android:theme="@android:style/Theme.Translucent">
+                android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 

@@ -19,8 +19,8 @@ android {
         applicationId "com.angcyo.plugin2"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.0.1"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
@@ -64,7 +64,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 
-    implementation 'com.qihoo360.replugin:replugin-plugin-lib:2.3.1'
+    implementation 'com.qihoo360.replugin:replugin-plugin-lib:' + replugin_version
 }
 
 apply from: '../plugin.gradle'
